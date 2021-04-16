@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Parcel App</title>
+    <link rel="stylesheet" href="/index.HASH_REF_c1b6092c958efb34e5ea0540fc33897e.css">
+    <script src="/index.HASH_REF_043affa210fd5d10be6d99797cacc1f4.js"></script>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+    <p>test watch</p>
+  </body>
+</html>
