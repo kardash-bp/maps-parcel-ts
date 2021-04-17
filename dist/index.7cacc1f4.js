@@ -442,7 +442,69 @@ id) /*: string*/
 }
 
 },{}],"3rfh7":[function(require,module,exports) {
+var _Map = require('./Map');
+const map = new _Map.Map('map');
 
+},{"./Map":"4qVE9"}],"4qVE9":[function(require,module,exports) {
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "Map", function () {
+  return Map;
+});
+class Map {
+  constructor(divId) {
+    this.googleMap = new google.maps.Map(document.getElementById(divId), {
+      zoom: 5,
+      center: {
+        lat: 0,
+        lng: 0
+      }
+    });
+  }
+}
+
+},{"@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"5gA8y":[function(require,module,exports) {
+"use strict";
+
+exports.interopDefault = function (a) {
+  return a && a.__esModule ? a : {
+    default: a
+  };
+};
+
+exports.defineInteropFlag = function (a) {
+  Object.defineProperty(a, '__esModule', {
+    value: true
+  });
+};
+
+exports.exportAll = function (source, dest) {
+  Object.keys(source).forEach(function (key) {
+    if (key === 'default' || key === '__esModule') {
+      return;
+    } // Skip duplicate re-exports when they have the same value.
+
+
+    if (key in dest && dest[key] === source[key]) {
+      return;
+    }
+
+    Object.defineProperty(dest, key, {
+      enumerable: true,
+      get: function () {
+        return source[key];
+      }
+    });
+  });
+  return dest;
+};
+
+exports.export = function (dest, destName, get) {
+  Object.defineProperty(dest, destName, {
+    enumerable: true,
+    get: get
+  });
+};
 },{}]},["4UKJc","3rfh7"], "3rfh7", "parcelRequire9dad")
 
 //# sourceMappingURL=index.7cacc1f4.js.map

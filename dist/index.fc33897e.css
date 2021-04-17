@@ -1,5 +1,11 @@
+html,
 body {
-  color: rebeccapurple;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#map {
+  height: 100%;
 }
 
 /*# sourceMappingURL=index.fc33897e.css.map */
