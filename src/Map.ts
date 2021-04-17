@@ -1,4 +1,5 @@
-interface Mappable {
+export interface Mappable {
+  description: string
   location: { lat: number; lng: number }
 }
 
@@ -21,8 +22,10 @@ export class Map {
         lng: obj.location.lng,
       },
     })
-    const infoWindow = new google.maps.InfoWindow({ content: 'Hello!' })
     marker.addListener('click', () => {
+      const infoWindow = new google.maps.InfoWindow({
+        content: obj.description,
+      })
       infoWindow.open(this.googleMap, marker)
     })
   }

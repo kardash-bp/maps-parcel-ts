@@ -475,10 +475,10 @@ class Map {
         lng: obj.location.lng
       }
     });
-    const infoWindow = new google.maps.InfoWindow({
-      content: 'Hello!'
-    });
     marker.addListener('click', () => {
+      const infoWindow = new google.maps.InfoWindow({
+        content: obj.description
+      });
       infoWindow.open(this.googleMap, marker);
     });
   }
@@ -541,6 +541,7 @@ class User {
       lat: parseFloat(_fakerDefault.default.address.latitude()),
       lng: +_fakerDefault.default.address.longitude()
     };
+    this.description = `Username: ${this.name}`;
   }
 }
 
@@ -70986,11 +70987,11 @@ module["exports"] = [
   "فرامرزی",
   "فرج",
   "فرشیدورد",
-  "فرمانفرمائیان",
+  "فرمانفرمائ��ان",
   "فروتن",
   "فرهنگ",
   "فریاد",
-  "ف��ایی",
+  "فنایی",
   "فنی‌زاده",
   "فولادوند",
   "فهمیده",
@@ -103423,7 +103424,7 @@ module["exports"] = [
   "신길",
   "행신",
   "대명",
-  "동탄"
+  "���탄"
 ];
 
 },{}],"1lAcn":[function(require,module,exports) {
@@ -132353,9 +132354,9 @@ module["exports"] = [
   "Радимирович",
   "Радимович",
   "Родіонович",
-  "Романович",
+  "Романо��ич",
   "Ростиславович",
-  "Русланови��",
+  "Русланович",
   "Святославович",
   "Сергійович",
   "Славутович",
@@ -137311,6 +137312,7 @@ class Company {
       lat: +_fakerDefault.default.address.latitude(),
       lng: +_fakerDefault.default.address.longitude()
     };
+    this.description = `Company: ${this.nameComp} - Catchphrase: ${this.phrase}`;
   }
 }
 

@@ -1,7 +1,9 @@
 import faker from 'faker'
+import { Mappable } from './Map'
 
-export class Company {
+export class Company implements Mappable {
   nameComp: string
+  description: string
   phrase: string
   location: {
     lat: number
@@ -14,5 +16,6 @@ export class Company {
       lat: +faker.address.latitude(),
       lng: +faker.address.longitude(),
     }
+    this.description = `Company: ${this.nameComp} - Catchphrase: ${this.phrase}`
   }
 }
